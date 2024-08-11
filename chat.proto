@@ -1,0 +1,15 @@
+syntax = "proto3";
+package chat;
+
+// Add this line to specify the Go package path
+option go_package = "/home/gabs/Documents/projetos/chat";
+
+
+message Message {
+    string body = 1;
+}
+
+
+service ChatService {
+    rpc SayHello(Message) returns (Message) {}
+}
